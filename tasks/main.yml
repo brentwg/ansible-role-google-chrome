@@ -4,5 +4,5 @@
 
 - name: Install Google Chrome
   package:
-    name: "{{ code_package_name }}"
+    name: "{{ chrome_package_name }}"
     state: present
