@@ -3,10 +3,6 @@
   copy:
     src: "files/google-chrome.repo"
     dest: "/etc/yum.repos.d/google-chrome.repo"
-    owner: root
-    group: root
-    mode: 0644
-  register: chromerepofile
 
 - name: Import the repo key to the RPM database (RHEL)
   rpm_key:
