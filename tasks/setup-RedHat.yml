@@ -6,7 +6,13 @@
 
 - name: Copy the Google Chrome REPO file (RHEL)
   copy:
-    src: "files/google-chrome.repo"
+    content: |
+      [google-chrome]
+      name=Google Chrome
+      baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+      enabled=1
+      gpgcheck=1
+      gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
     dest: "/etc/yum.repos.d/google-chrome.repo"
     owner: root
     group: root
