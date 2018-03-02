@@ -1,10 +1,13 @@
 ---
-- name: Copy the Google Chrome REPO file (RHEL)
-  copy:
-    src: "files/google-chrome.repo"
-    dest: "/etc/yum.repos.d/google-chrome.repo"
-
 - name: Import the repo key to the RPM database (RHEL)
   rpm_key:
     key: "{{ chrome_repo_key_url }}"
     state: present
+
+- name: Copy the Google Chrome REPO file (RHEL)
+  copy:
+    src: "files/google-chrome.repo"
+    dest: "/etc/yum.repos.d/google-chrome.repo"
+    owner: root
+    group: root
+    mode: 0644
