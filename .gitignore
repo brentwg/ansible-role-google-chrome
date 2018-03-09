@@ -2,4 +2,3 @@
 tests/test.sh
 *.swp
 *.rnd
-*.retry
