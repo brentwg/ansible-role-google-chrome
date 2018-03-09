@@ -5,3 +5,5 @@ yum_repo_name: google-chrome
 yum_repo_description: Google Chrome
 yum_repo_baseurl: 'http://dl.google.com/linux/chrome/rpm/stable/$basearch'
 yum_repo_key: https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+apt_repo_key: https://dl.google.com/linux/linux_signing_key.pub

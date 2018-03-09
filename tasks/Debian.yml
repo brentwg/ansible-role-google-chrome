@@ -1,0 +1,15 @@
+---
+- name: Import the APT repo key (Debian)
+  apt_key:
+    url: "{{ apt_repo_key }}"
+
+- name: Create the APT repository (Debian)
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    filename: "{{ chrome_package_name }}"
+
+- name: Install the application package (Debian)
+  apt:
+    name: "{{ chrome_package_name }}"
+    update_cache: yes
+    
