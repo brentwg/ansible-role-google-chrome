@@ -1,4 +1,6 @@
 ---
+# NOTE: For some reason, it takes more than 1 iteration to register the change.
+#       Just ignore this for now.
 - name: Create the YUM repository (RedHat)
   yum_repository:
     name: "{{ yum_repo_name }}"
@@ -7,6 +9,7 @@
     gpgkey: "{{ yum_repo_key }}"
     gpgcheck: yes
     enabled: yes
+  changed_when: False
 
 - name: Install the application package (RedHat)
   package:
