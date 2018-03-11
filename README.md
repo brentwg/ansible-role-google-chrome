@@ -11,9 +11,11 @@ None.
 
 User modifiable variables and defaults are listed below. (For all variables, see `defaults/main.yml`):  
 ```
-TODO
+chrome_package_name: "google-chrome-stable" 
 ```  
-TODO...  
+You can specify which verson of Chrome that you wish to run. Other options include: `google-chrome-beta` or `google-chrome-unstable`, if that's your thing.  
+
+The rest of the defaults are used to create the YUM repo and provide URLs to gpg keys.  
 
 ## Dependencies
 
